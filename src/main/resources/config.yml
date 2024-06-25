@@ -1,0 +1,37 @@
+# 以下所有语言内容，颜色符号用 §
+
+# 指令4个：/cr /crget /crreload /crtop  默认op可用，没设置权限节点。
+
+Prefix: '§7[§a消费记录§7] '
+# 用于查看箱子商店是否购买有效，设置为true时，会打印日志到控制台
+QSDebug: true
+Message:
+  Error: '§c插件发生错误,请查看控制台报错'
+  MissParam: '§a指令用法: /cr <add/set/take/create> <玩家> <金额>'
+  InvalidParam: '§a指令可用参数类型: add/set/take/create'
+  InvalidPlayer: '§c未在数据库中搜索到该玩家名的记录'
+  ExistPlayer: "§c所创建玩家已在数据库中存在!"
+  ################################################
+  #####$p表示玩家 %new表示最新金额 %old表示原有金额#####
+  ################################################
+  AddSucceed: '§a操作成功,已将玩家 %p 的消费记录增加到 %new'
+  SetSucceed: '§a操作成功,已将玩家 %p 的消费记录设置为 %new'
+  TakeSucceed: '§a操作成功,已将玩家 %p 的消费记录减少为 %new'
+  CreateSucceed: '§a操作成功,已创建玩家 %p 的消费记录为 %new'
+  ##################################################
+  GetSucceed: '§a查询成功,玩家 %p 的消费记录为 %data'
+  TopHead: '=========消费榜单========='
+  TopEnd: '========================'
+  # 变量自动替换 %i 与 %p 与 %num
+  TopFormat: '§7第 %i 名 §e%p §7--- 金额: §e%num'
+Placeholder:
+  # 占位符 %cr_top_[名次]% 获取相应的玩家和金额，
+  # 占位符 %cr_me% 获取自身所在位次
+  PlayerColor: '§7'
+  AmountColor: '§e'
+  BetweenPlayerAndAmountFormat: ' - '
+  # 占位符%cr_get_[名次]%查询不到特定位次玩家的返回内容
+  InvalidNum: '虚位以待'
+  # 整数值 6000 = 1分钟 12000 = 2分钟 180000 = 半小时
+  # 防止多次查库请求发生严重性能损失
+  RefreshInterval: '180000'

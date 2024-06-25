@@ -1,0 +1,18 @@
+name: Myth-ConsumptionRecord
+version: '${project.version}'
+main: me.consumptionrecord.ConsumptionRecord
+
+author: 404Yuner
+commands:
+  ConsumptionRecord:
+    aliases: [cr]
+    permission: op
+  ConsumptionRecordTop:
+    aliases: [crtop]
+    permission: op
+  ConsumptionRecordReload:
+    aliases: [crreload]
+    permission: op
+  ConsumptionRecordGet:
+    aliases: [crget]
+    permission: op
